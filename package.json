@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "actuallyWeatherApp",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "webpack --mode production"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Brayam1993/weatherApp.git"
