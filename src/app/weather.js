@@ -13,7 +13,7 @@ export class Weather {
     }
 
     changeLocation(city, countryCode) {
-        this.cyty = city;
+        this.city = city;
         this.countryCode = countryCode;
     }
 };

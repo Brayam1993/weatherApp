@@ -16,6 +16,8 @@ document.getElementById('w-change-btn').addEventListener('click',(e) => {
     const city = document.getElementById('city').value;
     const countryCode = document.getElementById('countryCode').value;
     console.log(city, countryCode);
+    weather.changeLocation(city,countryCode);
+    fetchWeather()
     e.preventDefault();
 });
 
