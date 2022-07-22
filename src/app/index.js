@@ -1,8 +1,11 @@
 const { Weather } = require('./weather');
-const { UI } = require('./ui')
+const { UI } = require('./ui');
+const { Store } = require('./store');
 
+const store = new Store();
+const { city, countryCode } = store.getLocationData();
 const ui = new UI();
-const weather = new Weather('London','uk')
+const weather = new Weather(city,countryCode)
 
 require('./index.css');
 
@@ -17,6 +20,7 @@ document.getElementById('w-change-btn').addEventListener('click',(e) => {
     const countryCode = document.getElementById('countryCode').value;
     console.log(city, countryCode);
     weather.changeLocation(city,countryCode);
+    store.setLocationData(city, countryCode);
     fetchWeather()
     e.preventDefault();
 });
